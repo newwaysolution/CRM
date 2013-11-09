@@ -14,6 +14,9 @@
 		
 <script>
 	$(document).ready(function(){
+		
+		
+		
 		$("#submit").click(function(){
 			console.log("1");
 			var isBlank=false;
@@ -56,16 +59,37 @@
 			if(isBlank == false){
 				return true;
 			}
+			else {
+				alert("");
+				return false;
+				
+			}
 		});
 		$("#cName").blur(function(){
 			if($("#cName").val() != ""){
 				$("#cNameErr").fadeOut();
 			}
+			
+			var code = $("#cCode");
+			$.ajax({
+				type: "post",
+				url: "CompanyController?action=matchCode",
+				data:'code='+code,
+				success: function(data){
+					
+				},
+				error: function(){alert("error"); 
+				}
+			});
+			
+			
 		});
 		$("#cCode").blur(function(){
 			if($("#cCode").val() != ""){
 				$("#cCodeErr").fadeOut();
 			}
+			
+			
 		});
 		$("#userName").blur(function(){
 			if($("#userName").val() != ""){
@@ -107,7 +131,16 @@
 				$("#employeeNoErr").fadeOut();
 			}
 		});
+	
+	
+		
+	
+	
 	});
+	
+	
+	
+	
 </script>
 <body>
 
@@ -229,49 +262,23 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</fieldset>
-						
-						<fieldset>
-							<h3>Employee Details</h3>
-							<div class="row">
-								<label>Name:</label>
-								<div class="inputs">
-									<ul>
-										<li><span class="input_wrapper"><input class="text" name="employeeName" type="text" id="employeeName"/></span></li>
-										<li style="display: none;color: red;" id="employeeNameErr">* Enter Employee Name</li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<label>Email Id:</label>
-								<div class="inputs">
-									<ul>
-										<li><span class="input_wrapper"><input class="text" name="employeeId" type="text" id="employeeId"/></span></li>
-										<li style="display: none;color: red;" id="employeeIdErr">* Enter Employee Email Id</li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<label>Contact No:</label>
-								<div class="inputs">
-									<ul>
-										<li><span class="input_wrapper"><input class="text" name="employeeNo" type="text" id="employeeNo"/></span></li>
-										<li style="display: none;color: red;" id="employeeNoErr">* Enter Employee Contact No</li>
-									</ul>
-								</div>
-							</div>
-						</fieldset>
-						
-						<fieldset>
-							<div class="forms">
+								
 								<div class="row">
 									<div class="inputs">
-										<span class="button blue_button"><span><span>Register</span></span><input name="submitbtn" type="submit" id="submit"/></span>
+										
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="inputs">
+										<span class="button blue_button" style="margin-left: 141px; border-right-width: 224px;"><span><span>Register</span></span>
+										<input name="submitbtn" type="submit" id="submit" style="left: 0px; width: 90px; height: 50px;"></span>
 									</div>
 								</div>
 							</div>
 						</fieldset>
+																		
+						
 					</form>				
 				</div>			
 				<span class="section_content_bottom"></span>

@@ -1,6 +1,18 @@
 <%@include file="Header.jsp" %>
 <%@include file="User_Menu1.jsp" %>
 <%@include file="User_Menu2.jsp" %>
+
+<head>
+<title>contact Dashboard</title>
+<script>
+$(document).ready(function(){
+	$("#contact_lk").addClass("selected_lk");
+	$("#contact_options").show();
+});
+</script>
+
+</head>
+
 <div id="content">
 	<div class="inner">
 		<div class="section">

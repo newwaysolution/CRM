@@ -1,6 +1,18 @@
 <%@include file="User_Header.jsp" %>
 <%@include file="User_Menu1.jsp" %>
 <%@include file="User_Menu2.jsp" %>
+
+<head>
+<title>lead Dashboard</title>
+<script>
+$(document).ready(function(){
+	$("#lead_lk").addClass("selected_lk");
+	$("#lead_options").show();
+});
+</script>
+
+</head>
+
 <div id="content">
 	<div class="inner">
 		<div class="section">

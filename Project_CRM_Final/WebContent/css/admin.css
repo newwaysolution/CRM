@@ -110,6 +110,7 @@ vertical-align:middle;
 	position: relative;
 	top: 0;
 	left: 0;
+	height: 128px;
 }
 
 #header_main_menu_bg {
@@ -117,7 +118,7 @@ vertical-align:middle;
 	left: 50%;
 	top: 0;
 	width: 958px;
-	height: 154px;
+	height: 128px;
 	margin: 0 0 0 -479px;
 	display: block;
 	background-repeat:no-repeat;
@@ -455,6 +456,7 @@ vertical-align:middle;
 
 .section {
 	padding: 15px 0 0;
+	margin-top: 20px;
 }
 
 .title_wrapper_top,
@@ -1462,7 +1464,7 @@ h3 {
 
 .forms {
 	float: left;
-	width: 620px;
+/*	width: 620px;*/
 }
 
 .search_form {
@@ -1475,7 +1477,7 @@ h3 {
 
 
 .search_form .row {
-	width: 100%;
+	width: 50%;
 	overflow: hidden;
 	padding: 11px 0 0;
 	float: left;
@@ -1493,7 +1495,7 @@ h3 {
 
 .search_form .inputs {
 	float: right;
-	width: 500px;
+	width: 294px;
 }
 
 .inputs ul {
